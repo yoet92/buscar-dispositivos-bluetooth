@@ -52,7 +52,7 @@ tbody tr {
     -ms-user-select: none;
     user-select: none;
     background-color: transparent;
-    border: 1px solid transparent;
+    border: 1px solid #007bff;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -60,7 +60,6 @@ tbody tr {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     cursor: pointer;
     color: #007bff;
-    border-color: #007bff;
     outline: none;
 }
 

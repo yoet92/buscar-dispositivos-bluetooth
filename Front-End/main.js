@@ -6,7 +6,7 @@ var search = document.getElementById('search');
 
 window.onload = function () {
     processDevices([]);
-}
+};
 search.addEventListener('click', searchDevices, false);
 
 function searchDevices() {
@@ -17,11 +17,11 @@ function searchDevices() {
             clearResult();
             processResponse(ev.target.response); // -> Aqui esta la respuesta en formato JSON
         }
-    }
+    };
     xhr.onerror = function (ev) {
-        var msg = ev.target && ev.target.readyState === 4 && ev.target.status === 0 ? 'No se pudo conectar con el servicio' : 'Ocurrio un error al buscar'
+        var msg = ev.target && ev.target.readyState === 4 && ev.target.status === 0 ? 'No se pudo conectar con el servicio' : 'Ocurrio un error al buscar';
         showMessage(msg)
-    }
+    };
     xhr.open('GET', 'http://localhost:9092/search', true);
     xhr.send();
 }
@@ -42,13 +42,13 @@ function clearResult() {
 }
 
 /**
-    La respuesta siempre viene con esta estructura
-    {
+ La respuesta siempre viene con esta estructura
+ {
         error: boolean,
         response: any,
         message: string
     }
-*/
+ */
 function processResponse(response) {
     var data = JSON.parse(response); // -> JSON.parse combierte el JSON a Objeto
 
